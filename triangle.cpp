@@ -1,6 +1,7 @@
 //
 // Created by abrikosik on 28.10.2024.
 //
+#include <windows.h>
 #include <iostream>
 int triangle(int x, int y, int z){
     int perimetr = x + y + z;
