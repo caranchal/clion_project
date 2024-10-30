@@ -1,13 +1,23 @@
 //
 // Created by abrikosik on 28.10.2024.
 //
-#include <windows.h>
 #include <iostream>
-int triangle(int x, int y, int z){
-    int perimetr = x + y + z;
+#include "math.h"
+using namespace std;
 
-}
 int main(){
-    std::cout<<triangle(2,2,3);
-
+    int a, b, c;
+    cin>>a>>b>>c;
+    if(a + b <= c){
+        cout<<"UNDEFINED"<<endl;
+        return 0;
+    }
+    if(pow(c,2) == pow(a,2) + pow(b,2)){
+        cout<<"YES"<<endl;
+        return 0;
+    }
+    else{
+        cout<<"NO"<<endl;
+        return 0;
+    }
 }
