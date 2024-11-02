@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void bubbleSort(int list[], int listLength) {
+void Sort(int list[], int listLength) {
     while (listLength--) {
         bool swapped = false;
 
@@ -31,7 +31,7 @@ int main() {
         cin >> list[i];
         i++;
     }
-    bubbleSort(list, 7);
+    Sort(list, 7);
     cout << "Первое место с результатом = " << list[6] << endl;
     cout << "Второе место с рузультатом = " << list[5] << endl;
     cout << "Третье место с результатом = " << list[4] << endl;
