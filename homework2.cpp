@@ -4,6 +4,7 @@
 #include <iostream>
 #include "windows.h"
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
@@ -54,28 +55,79 @@ void password() {
     cout << "время на худший исход = " << bad_time << " секунд" << endl;
 }
 
-int easy_values(int num) {
-    if (num < 2) {
-        return false;
-    }
-    for (int i = 2; i * i <= num; ++i) {
-        if (num % i == 0) {
-            return false;
-        } else {
-            return true;
-        }
+void picture(int colvo, string symbol, string vertikal) {
+    if (vertikal == "-") {
+        for (int i = 0; i < colvo; ++i) {
+            cout << symbol;
 
+        }
+        if (vertikal == "|") {
+            for (int j = 0; j < colvo; ++j) {
+                cout << symbol << endl;
+            }
+
+        }
     }
+
 
 }
+bool prostoNumer(int n){
+    for (int i = 2; i<=sqrt(n); i++)
+        if (n % i == 0)
+            return false;
+    return true;
+}
+
+
 
 int main() {
     /*value_n_sum(55);
     way(4);
-    password();*/
-    for (int i = 2; i <= 1000; ++i) {
-        cout<<easy_values(i)<<endl;
+    password();
+    SetConsoleOutputCP(CP_UTF8);
 
+    int colvo;
+    string symbol;
+    string vertikal;
+    cout << "ВВедите количество символов которые хотите ввести" << endl;
+    cin >> colvo;
+    cout << "ВВедите символ который хотите видеть и" << endl;
+    cin >> symbol;
+    cout << "введите напрвление - или |" << endl;
+    cin >> vertikal;
+    if (vertikal == "|") {
+        for (int i = 0; i < colvo; ++i) {
+            cout << symbol;
 
-   }
+        }
+
+    }
+    if (vertikal == "|") {
+        for (int j = 0; j < colvo; ++j) {
+            cout << symbol << endl;
+        }
+
+    }*/
+
+    /* for(int i = 2; i < 1000;++i){
+         if(i * i % 24 == 1){
+             cout<<i<<endl;
+         }
+ */
+    int counter;
+    SetConsoleOutputCP(CP_UTF8);
+    cout<<""<<endl;
+    for (int i = 2; i < 1000; ++i) {
+        if (prostoNumer(i) == true) {
+            cout << i << "\t";
+            counter++;
+        }
+    }
+    cout<<"всеого простых чисел = "<<counter<<endl;
 }
+
+
+
+
+
+
