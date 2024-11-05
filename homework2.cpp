@@ -9,7 +9,7 @@
 using namespace std;
 
 
-void value_n_sum(int n) {
+void value_n_sum(int n) {// сумма чисел
     int sum_value;
     while (n != 0) {
 
@@ -19,7 +19,7 @@ void value_n_sum(int n) {
     cout << sum_value << endl;
 }
 
-void way(int s) {
+void way(int s) {//путь черепахи
     int start = 15;
     while (s != 2) {
         start += 2;
@@ -55,7 +55,7 @@ void password() {
     cout << "время на худший исход = " << bad_time << " секунд" << endl;
 }
 
-void picture(int colvo, string symbol, string vertikal) {
+void picture(int colvo, string symbol, string vertikal) {//вывод символов
     if (vertikal == "-") {
         for (int i = 0; i < colvo; ++i) {
             cout << symbol;
@@ -71,7 +71,7 @@ void picture(int colvo, string symbol, string vertikal) {
 
 
 }
-bool prostoNumer(int n){
+bool easy_number(int n){//простое число
     for (int i = 2; i<=sqrt(n); i++)
         if (n % i == 0)
             return false;
@@ -118,7 +118,7 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     cout<<""<<endl;
     for (int i = 2; i < 1000; ++i) {
-        if (prostoNumer(i) == true) {
+        if (easy_number(i) == true) {
             cout << i << "\t";
             counter++;
         }
