@@ -71,13 +71,13 @@ void picture(int colvo, string symbol, string vertikal) {//вывод симво
 
 
 }
-bool easy_number(int n){//простое число
-    for (int i = 2; i<=sqrt(n); i++)
+
+bool easy_number(int n) {//простое число
+    for (int i = 2; i <= sqrt(n); i++)
         if (n % i == 0)
             return false;
     return true;
 }
-
 
 
 int main() {
@@ -116,14 +116,14 @@ int main() {
  */
     int counter;
     SetConsoleOutputCP(CP_UTF8);
-    cout<<""<<endl;
+    cout << "" << endl;
     for (int i = 2; i < 1000; ++i) {
         if (easy_number(i) == true) {
             cout << i << "\t";
             counter++;
         }
     }
-    cout<<"всеого простых чисел = "<<counter<<endl;
+    cout << "всеого простых чисел = " << counter << endl;
 }
 
 
