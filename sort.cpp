@@ -10,15 +10,15 @@ int main()
    bool swaped = true;
    while(swaped == true){
    for(int i = left; i <= right;++i){
-       if(array[i - 1] > array[i]){
-           swap (array[i - 1], array[i]);
+       if(array[i] > array[i + 1]){
+           swap (array[i + 1 ], array[i]);
            swaped = false;
        }
        right--;
    }
    for(int i = right; i >= left;--i){
-       if(array[i] < array[i - 1]){
-           swap (array[i], array[i - 1])
+       if(array[i] < array[i + 1]){
+           swap (array[i], array[i + 1])
            swaped = false;
        }
        left++;
