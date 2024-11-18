@@ -50,7 +50,7 @@ void printMatrix(int** matrix, int size_X, int size_Y){
     }
 }
 
-//Функция создания динамической матрицы размера size_X по вертикали и size_Y горизонтали
+
 
 
 
