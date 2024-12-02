@@ -1,5 +1,6 @@
 #include <iostream>
 #include<cmath>
+#include<string>
 using namespace std;
 
 void dynamic_array(int* array, int n) {
@@ -190,17 +191,55 @@ int count_pozitive(int** matrix, int size_x, int size_y) {
 
 }
 */
-int cub(int** mat, int size_x, int size_y, int size_z) {
+/* int*** cub(int size_x, int size_y, int size_z) {
+	int*** newMat = new int** [size_x];
+	for (int i = 0; i < size_x; i++) {
+		newMat[i] = new int*[size_y];
+		for (int j = 0; j < size_y; j++) {
+			newMat[i][j] = new int [size_z];
+			for (int k = 0; k < size_z; k++) {
+				newMat[i][j][k] = i + j + k;
+			}
+		}
+	}
+
+	return newMat;
+}
+*/
+/*void print_cub(int*** mat, int size_x, int size_y, int size_z) {
+	for (int i = 0; i < size_x;i++) {
+		for (int j = 0; j < size_y;j++) {
+			for (int k = 0; k < size_z;k++) {
+				cout << mat[i][j][k] << " ";
+			}cout << endl;
+		}cout << endl;
+	}
 
 
+}
+*/
+string task1(string str) {
+
+	string result = str;
+	int temp = size(result);
+	for (int i = 0; i < temp;i++) {
+		if (result[i] == 'a' || result[i] == 'e' || result[i] == 'i' || result[i] == 'o' || result[i] == 'u' || result[i] == 'y') {
+			result[i] = '_';
+		}
+
+	}
+	return result;
 
 }
 int main()
 {
-	int mat[3][3][3]{ {1,1,1}, {1,1,1},{1,1,1} };
-	int** matrix = matrixx(5, 5);
-	const int size = 8;
-	int arr[size] = {1,5,3,2,5,6,4,2};
+	//string str = "hello world";
+	//cout<<task1(str);
+	//int*** mat = cub(3,3,3);
+	//print_cub(mat, 3, 3, 3);
+	//int** matrix = matrixx(5, 5);
+	//const int size = 8;
+	//int arr[size] = {1,5,3,2,5,6,4,2};
 	//int* array2 = new int[8] {1, 5, 0, 0, 7, 6, 5, 0};
 	//int* array = new int[7] {2, 1, 3, 8, 5, 7, 10};
 	//cout<<max_array_a2(array, 7);
@@ -219,6 +258,8 @@ int main()
 
 	//printMatrix(matrix, 5, 5);
 	//cout << sum_matrix(matrix, 5, 5);
-	cout << count_pozitive(matrix, 5, 5);
+	//cout << count_pozitive(matrix, 5, 5);
+
+
 }
 
