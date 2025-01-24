@@ -161,9 +161,9 @@ int main()
         case 0:
         if (_kbhit()) {
             char key = _getch();
-            if (key == 'q') break;  // Выход по нажатию 'q'
+            if (key == 'q') break;  
             if (key == 'r') {
-                rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
+                rotationAngle = (rotationAngle + 1) % 4; 
             }
         }
             RotateMatrix(figure1, rotationAngle);
@@ -176,9 +176,9 @@ int main()
         case 1: 
             if (_kbhit()) {
                 char key = _getch();
-                if (key == 'q') break;  // Выход по нажатию 'q'
+                if (key == 'q') break; 
                 if (key == 'r') {
-                    rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
+                    rotationAngle = (rotationAngle + 1) % 4;  
                 }
             }
             RotateMatrix(figure2, rotationAngle);
@@ -192,9 +192,9 @@ int main()
         case 2:
             if (_kbhit()) {
                 char key = _getch();
-                if (key == 'q') break;  // Выход по нажатию 'q'
+                if (key == 'q') break;
                 if (key == 'r') {
-                    rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
+                    rotationAngle = (rotationAngle + 1) % 4;  
                 }
             }
             RotateMatrix(figure3, rotationAngle);
@@ -207,9 +207,9 @@ int main()
         case 3:
             if (_kbhit()) {
                 char key = _getch();
-                if (key == 'q') break;  // Выход по нажатию 'q'
+                if (key == 'q') break;  
                 if (key == 'r') {
-                    rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
+                    rotationAngle = (rotationAngle + 1) % 4;  
                 }
             }
             RotateMatrix(figure4, rotationAngle);
@@ -223,9 +223,9 @@ int main()
         case 4:
             if (_kbhit()) {
                 char key = _getch();
-                if (key == 'q') break;  // Выход по нажатию 'q'
+                if (key == 'q') break; 
                 if (key == 'r') {
-                    rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
+                    rotationAngle = (rotationAngle + 1) % 4; 
                 }
             }
             RotateMatrix(figure5, rotationAngle);
@@ -238,9 +238,9 @@ int main()
         case 5:
             if (_kbhit()) {
                 char key = _getch();
-                if (key == 'q') break;  // Выход по нажатию 'q'
+                if (key == 'q') break;  
                 if (key == 'r') {
-                    rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
+                    rotationAngle = (rotationAngle + 1) % 4; 
                 }
             }
             RotateMatrix(figure6, rotationAngle);
@@ -255,25 +255,6 @@ int main()
         }
     }
    
-  /*  int rotationAngle = 0;
-    char newFigure[4][4];
-
-    while (true) {
-        Sleep(300);
-        RotateMatrix(figure2, rotationAngle);  // Ротация фигуры
-        figure(figure2, 4);  // Отрисовка ротации фигуры
-
-        // Обработка нажатий клавиш
-        if (_kbhit()) {
-            char key = _getch();
-            if (key == 'q') break;  // Выход по нажатию 'q'
-            if (key == 'r') {
-                rotationAngle = (rotationAngle + 1) % 4;  // Ротация фигуры при нажатии 'r'
-            }
-        }
-
-        Sleep(300);  // Задержка для уменьшения нагрузки на процессор
-        
-    }*/
+ 
 
 }
