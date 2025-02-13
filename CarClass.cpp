@@ -10,7 +10,7 @@ public:
         this->radius = 0;
         this->pr = "";
     }
-    Wheels(int radius,string pr) {
+    Wheels(int radius, string pr) {
         this->radius = radius;
         this->pr = pr;
     }
@@ -26,7 +26,7 @@ public:
     void setPr(string pr) {
         this->pr = pr;
     }
-    ~Wheels(){}
+    ~Wheels() {}
 
 };
 class Engine {
@@ -38,7 +38,7 @@ public:
         this->power = 0;
         this->ob = 0;
     }
-    Engine(int power,int ob) {
+    Engine(int power, int ob) {
         this->power = power;
         this->ob = power;
     }
@@ -54,8 +54,26 @@ public:
     void setOb(int ob) {
         this->ob = ob;
     }
-    ~Engine(){}
+    ~Engine() {}
 
+};
+class Transmission {
+private:
+    string type;
+public:
+    string getType() {
+        return type;
+    }
+    void setType(string type) {
+        this->type = type;
+    }
+    Transmission() {
+        this->type = "";
+    }
+    Transmission(string type) {
+        this->type = type;
+    }
+    ~Transmission(){ }
 };
 class Body {
 private:
@@ -66,11 +84,11 @@ public:
         this->material = "металл";
         this->color = "белый";
     }
-    Body(string material,string color) {
+    Body(string material, string color) {
         this->material = material;
         this->color = color;
     }
-    ~Body(){}
+    ~Body() {}
     string getMaterial() {
         return material;
     }
@@ -84,7 +102,7 @@ public:
         this->color = color;
     }
 };
-class Car :Wheels,Engine,Body
+class Car :Wheels, Engine, Body, Transmission
 {
 private:
     string model;
@@ -92,17 +110,18 @@ private:
     string country;
 public:
 
-    Car():Wheels(),Engine(),Body()
+    Car() :Wheels(), Engine(), Body(),Transmission()
     {
         this->model = "";
         this->date = "";
         this->country = "";
 
     }
-    Car(string model, string date, string country, string material, string color, int power, int ob, int radius, string pr) :
+    Car(string model, string date, string country, string material, string color, int power, int ob, int radius, string pr,string type) :
         Wheels(radius, pr),
         Engine(power, ob),
-        Body(material, color) 
+        Body(material, color),
+        Transmission(type)
     {
         this->model = model;
         this->date = date;
@@ -129,7 +148,7 @@ public:
         this->country = country;
     }
     friend ostream& operator<<(ostream& ostream, Car& cur) {
-        ostream << "model - " << cur.model << "\n"<<"date - "<<cur.date<<"\n"<<"country - "<<cur.country<<endl;
+        ostream << "model - " << cur.model << "\n" << "date - " << cur.date << "\n" << "country - " << cur.country << endl;
         ostream << "material - " << cur.getMaterial() << "\n" << "color" << cur.getColor() << endl;
         ostream << "power - " << cur.getPower() << "\n" << "ob - " << cur.getOb() << endl;
         ostream << "radius - " << cur.getRadius() << "\n" << "pr - " << cur.getPr();
@@ -139,7 +158,6 @@ public:
 };
 int main()
 {
-    Car car = Car("Bmw x3", "2024", "Germany", "Carbon", "RED", 550, 5, 21, "michlen");
+    Car car = Car("Bmw x3", "2024", "Germany", "Carbon", "RED", 550, 5, 21, "michlen","механика");
     cout << car;
 }
-
