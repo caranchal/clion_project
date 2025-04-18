@@ -20,7 +20,6 @@ fun main() {
     else{
         print("ошибка")
     }
-    // задание 2
     val stroke1 = "popoi"
     val stroke2 = "upeer"
     val result = stroke1 + stroke2 
@@ -28,7 +27,6 @@ fun main() {
 
 
 
-    //задние 3
     var stroke3 = "qwe"
     var res = CharArray(stroke.length) 
 
