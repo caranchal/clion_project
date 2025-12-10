@@ -34,27 +34,5 @@ int array[11] = {1, 5, 3, 6, -1, 1, 5, 3, 6, -1, 2};
         }
         cout<<endl;
     }
-    char matrixl[9][9];
-    
-    for(int i = 0; i < 9;++i){
-        for(int j = 0; j < 9;++j){
-            if(i % 4 == 0 || j % 4 == 0){
-            matrixl[i][j] = '*';
-                
-            }
-            else{
-                matrixl[i][j] = ' ';
-                
-            }
-        }
-    }
-    for(int i = 0; i < 9;++i){
-            for(int j = 0; j < 9;++j){
-                cout<<matrixl[i][j]<<" ";
-        }
-        cout<<endl;
-    
-    
-}
     
 }
