@@ -22,7 +22,7 @@ int array[11] = {1, 5, 3, 6, -1, 1, 5, 3, 6, -1, 2};
     cout<<temp % 11<<endl;
     cout<<counter<<endl;
     
-    int matrix[5][5];
+    int matrix[4][5];
     for(int i = 0; i < 5;++i){
         for(int j = 0; j < 5;++j){
             matrix[i][j] = i + j;
