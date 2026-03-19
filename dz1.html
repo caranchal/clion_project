@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка — Максим Соколов</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        .photo-frame {
+            transition: all 0.3s ease;
+        }
+        .photo-frame:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-50 text-zinc-800">
+    <!-- HEADER / ГЕРОЙ -->
+    <header class="hero-bg text-white py-16">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+            <!-- Фото профиля -->
+            <div class="flex-shrink-0">
+                <img src="https://picsum.photos/id/64/320/320" 
+                     alt="Моя фотография" 
+                     class="photo-frame w-64 h-64 rounded-3xl border-8 border-white/30 shadow-2xl object-cover">
+            </div>
+            
+            <!-- Текст профиля -->
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-5xl font-bold tracking-tight mb-2">Максим Соколов</h1>
+                <p class="text-2xl opacity-90 mb-4">11 класс • Школа № 42 • Москва</p>
+                <p class="max-w-md mx-auto md:mx-0 text-lg opacity-80 leading-relaxed">
+                    Студент с сильным уклоном в IT и математику. 
+                    Увлекаюсь программированием, киберспортом и разработкой веб-приложений.
+                </p>
+                
+                <!-- Краткие интересы -->
+                <div class="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
+                    <span class="bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium">Python</span>
+                    <span class="bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium">Web-разработка</span>
+                    <span class="bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium">Футбол</span>
+                    <span class="bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium">Научная фантастика</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        
+        <!-- СЕКЦИЯ: УЧЕБНАЯ УСПЕВАЕМОСТЬ -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-zinc-900">Учебная успеваемость</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- ТАБЛИЦА 1: Основные предметы (1 семестр 2025/26) -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="bg-blue-600 text-white px-8 py-5 font-semibold text-lg">
+                        1 семестр 2025/26 • Основные предметы
+                    </div>
+                    <table class="w-full text-sm">
+                        <thead class="bg-zinc-100">
+                            <tr>
+                                <th class="font-medium text-zinc-600">Предмет</th>
+                                <th class="font-medium text-zinc-600">Оценка</th>
+                                <th class="font-medium text-zinc-600">Период</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr>
+                                <td class="font-medium">Алгебра и начала анализа</td>
+                                <td class="text-emerald-600 font-bold">5</td>
+                                <td>1 семестр</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Геометрия</td>
+                                <td class="text-emerald-600 font-bold">5</td>
+                                <td>1 семестр</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Физика</td>
+                                <td class="text-amber-600 font-bold">4</td>
+                                <td>1 семестр</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Русский язык</td>
+                                <td class="text-emerald-600 font-bold">5</td>
+                                <td>1 семестр</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Английский язык</td>
+                                <td class="text-emerald-600 font-bold">5</td>
+                                <td>1 семестр</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Информатика</td>
+                                <td class="text-emerald-600 font-bold">5</td>
+                                <td>1 семестр</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- ТАБЛИЦА 2: Мой выбор — Успеваемость по онлайн-курсам и проектам -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="bg-violet-600 text-white px-8 py-5 font-semibold text-lg">
+                        Онлайн-курсы и проекты • 2025 год
+                    </div>
+                    <table class="w-full text-sm">
+                        <thead class="bg-zinc-100">
+                            <tr>
+                                <th class="font-medium text-zinc-600">Курс / Проект</th>
+                                <th class="font-medium text-zinc-600">Результат</th>
+                                <th class="font-medium text-zinc-600">Период</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr>
+                                <td class="font-medium">Python для начинающих (Stepik)</td>
+                                <td class="text-emerald-600 font-bold">100%</td>
+                                <td>сентябрь 2025</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">HTML + CSS + JS (freeCodeCamp)</td>
+                                <td class="text-emerald-600 font-bold">100%</td>
+                                <td>октябрь 2025</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Веб-визитка (этот проект)</td>
+                                <td class="text-emerald-600 font-bold">завершён</td>
+                                <td>март 2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Олимпиада по информатике (районная)</td>
+                                <td class="text-amber-600 font-bold">2 место</td>
+                                <td>ноябрь 2025</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">Основы машинного обучения (Coursera)</td>
+                                <td class="text-emerald-600 font-bold">92%</td>
+                                <td>февраль 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ГАЛЕРЕЯ ФОТО И СКРИНШОТОВ -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-zinc-900">Мои фото и скриншоты</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Основная фотография (дублируем для примера) -->
+                <div class="rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/id/64/600/600" 
+                         alt="Я на уроке информатики" 
+                         class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300">
+                    <p class="text-xs text-center py-3 bg-white text-zinc-500">Я на уроке программирования</p>
+                </div>
+                
+                <!-- Скриншот 1 -->
+                <div class="rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/id/201/600/600" 
+                         alt="Скриншот проекта" 
+                         class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300">
+                    <p class="text-xs text-center py-3 bg-white text-zinc-500">Скриншот моей первой веб-страницы</p>
+                </div>
+                
+                <!-- Скриншот 2 -->
+                <div class="rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/id/237/600/600" 
+                         alt="Скриншот кода" 
+                         class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300">
+                    <p class="text-xs text-center py-3 bg-white text-zinc-500">Код Python — игра «Змейка»</p>
+                </div>
+                
+                <!-- Дополнительное фото -->
+                <div class="rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/id/29/600/600" 
+                         alt="Я на футболе" 
+                         class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300">
+                    <p class="text-xs text-center py-3 bg-white text-zinc-500">Матч школьной команды</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ИТОГ ЛИЧНОСТИ И ЦЕЛИ -->
+        <section class="bg-white rounded-3xl shadow-2xl p-10 md:p-16">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl font-semibold mb-6">Кто я и куда иду</h2>
+                <p class="text-lg leading-relaxed text-zinc-600 mb-10">
+                    Я — целеустремлённый 17-летний парень, который любит превращать идеи в работающий код. 
+                    Мои главные ценности: постоянное развитие, честность и командная работа. 
+                    В будущем хочу стать full-stack разработчиком и создать собственный стартап в сфере EdTech.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <!-- Рабочие ссылки -->
+                    <a href="https://github.com" 
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-zinc-900 hover:bg-black text-white font-medium px-8 py-4 rounded-2xl transition-all">
+                        <span>GitHub</span>
+                        <span class="text-2xl">→</span>
+                    </a>
+                    
+                    <a href="https://t.me" 
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded-2xl transition-all">
+                        <span>Telegram</span>
+                        <span class="text-2xl">→</span>
+                    </a>
+                    
+                    <a href="https://vk.com" 
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-violet-600 hover:bg-violet-700 text-white font-medium px-8 py-4 rounded-2xl transition-all">
+                        <span>ВКонтакте</span>
+                        <span class="text-2xl">→</span>
+                    </a>
+                </div>
+                
+                <p class="mt-10 text-sm text-zinc-500">
+                    Готов к новым проектам и сотрудничеству!<br>
+                    Связаться со мной можно по любой из ссылок выше.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-900 text-white py-8 text-center text-sm">
+        <div class="max-w-5xl mx-auto px-6">
+            <p>© 2026 Максим Соколов • Моя визитка создана с ❤️ и Tailwind CSS</p>
+            <p class="mt-2 text-zinc-500 text-xs">Копируйте код, меняйте данные и публикуйте где угодно!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Автоматическая инициализация Tailwind (уже работает через CDN)
+        console.log('%c✅ Визитка готова! Замените фото и ссылки на свои.', 'color: #3b82f6; font-weight: 600');
+    </script>
+</body>
+</html>
